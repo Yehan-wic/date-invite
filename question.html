@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Nethu ❤️</title>
+
+    <style>
+
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =========================================================
+           BODY
+        ========================================================= */
+
+        body {
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffdce3,
+                    #f3a5b8
+                );
+
+            position: relative;
+
+            padding: 40px 0;
+        }
+
+
+        /* =========================================================
+           FLOATING HEARTS
+        ========================================================= */
+
+        .heart {
+            position: fixed;
+
+            bottom: -50px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.65
+                );
+
+            pointer-events: none;
+
+            animation:
+                floatHeart
+                7s
+                linear
+                infinite;
+
+            z-index: 1;
+        }
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            font-size: 22px;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+            font-size: 30px;
+        }
+
+        .heart:nth-child(3) {
+            left: 55%;
+            animation-delay: 4s;
+            font-size: 18px;
+        }
+
+        .heart:nth-child(4) {
+            left: 80%;
+            animation-delay: 1s;
+            font-size: 27px;
+        }
+
+        .heart:nth-child(5) {
+            left: 90%;
+            animation-delay: 3s;
+            font-size: 20px;
+        }
+
+        @keyframes floatHeart {
+
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform:
+                    translateY(-110vh)
+                    rotate(20deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================================================
+           MAIN CARD
+        ========================================================= */
+
+        .card {
+            width: 92%;
+            max-width: 760px;
+
+            min-height: 650px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.97
+                );
+
+            border-radius: 32px;
+
+            padding:
+                50px 55px;
+
+            text-align: center;
+
+            box-shadow:
+                0 25px 65px
+                rgba(
+                    100,
+                    40,
+                    60,
+                    0.18
+                );
+
+            position: relative;
+
+            z-index: 10;
+
+            margin: 30px 0;
+
+            overflow: visible;
+
+            animation:
+                cardEnter
+                1s
+                ease;
+        }
+
+        @keyframes cardEnter {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(35px)
+                    scale(0.94);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+
+        /* =========================================================
+           FLOWER
+        ========================================================= */
+
+        .flower {
+            font-size: 65px;
+
+            margin-bottom: 20px;
+
+            animation:
+                flowerFloat
+                2.5s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes flowerFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-8px);
+            }
+        }
+
+
+        /* =========================================================
+           SMALL TEXT
+        ========================================================= */
+
+        .small-text {
+            color: #c25a72;
+
+            font-size: 15px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================================================
+           HEADING
+        ========================================================= */
+
+        h1 {
+            font-family:
+                "Segoe Print",
+                "Comic Sans MS",
+                cursive;
+
+            font-size: 42px;
+
+            color: #292929;
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================================================
+           MESSAGE
+        ========================================================= */
+
+        .message {
+            color: #666;
+
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================================================
+           QUESTION BOX
+        ========================================================= */
+
+        .question-box {
+            padding:
+                35px 30px;
+
+            background:
+                #fff7f8;
+
+            border:
+                1px solid
+                #ffd6df;
+
+            border-radius: 25px;
+
+            position: relative;
+
+            min-height: 230px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        /* =========================================================
+           QUESTION
+        ========================================================= */
+
+        .question {
+            font-family:
+                "Segoe Print",
+                "Comic Sans MS",
+                cursive;
+
+            font-size: 27px;
+
+            line-height: 1.5;
+
+            color: #333;
+
+            margin-bottom: 35px;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        /* =========================================================
+           BUTTON AREA
+        ========================================================= */
+
+        .button-area {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        /* =========================================================
+           YES BUTTON
+        ========================================================= */
+
+        #yesBtn {
+            border: none;
+
+            padding:
+                15px 38px;
+
+            border-radius: 50px;
+
+            background:
+                #ff4d6d;
+
+            color: white;
+
+            font-size: 18px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 20px
+                rgba(
+                    255,
+                    77,
+                    109,
+                    0.30
+                );
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease;
+        }
+
+        #yesBtn:hover {
+            background:
+                #e83e5d;
+
+            transform:
+                scale(1.08);
+        }
+
+
+        /* =========================================================
+           NO BUTTON
+        ========================================================= */
+
+        #noBtn {
+            position: absolute;
+
+            left: 58%;
+            top: 75%;
+
+            border: none;
+
+            padding:
+                15px 32px;
+
+            border-radius: 50px;
+
+            background:
+                #e5e5e5;
+
+            color: #555;
+
+            font-size: 18px;
+
+            cursor: pointer;
+
+            z-index: 50;
+
+            white-space: nowrap;
+
+            user-select: none;
+
+            -webkit-user-select: none;
+
+            touch-action: none;
+
+            box-shadow:
+                0 7px 18px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.10
+                );
+
+            transition:
+                left 0.25s ease,
+                top 0.25s ease;
+        }
+
+        #noBtn:hover {
+            transform: none;
+        }
+
+
+        /* =========================================================
+           NO MESSAGE
+        ========================================================= */
+
+        #message {
+            min-height: 25px;
+
+            margin-top: 20px;
+
+            color:
+                #ff4d6d;
+
+            font-size: 15px;
+
+            font-weight: 500;
+
+            position: relative;
+
+            z-index: 5;
+        }
+
+
+        /* =========================================================
+           DATE SECTION
+        ========================================================= */
+
+        #dateSection {
+            display: none;
+
+            animation:
+                sectionAppear
+                0.8s
+                ease;
+        }
+
+        @keyframes sectionAppear {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* =========================================================
+           HAPPY MESSAGE
+        ========================================================= */
+
+        .happy-message {
+            font-size: 18px;
+
+            line-height: 1.8;
+
+            color: #666;
+
+            max-width: 620px;
+
+            margin:
+                0 auto 30px;
+        }
+
+        .happy-message strong {
+            color:
+                #f04467;
+        }
+
+
+        /* =========================================================
+           DATE QUESTION
+        ========================================================= */
+
+        .date-question {
+            font-family:
+                "Segoe Print",
+                "Comic Sans MS",
+                cursive;
+
+            font-size: 27px;
+
+            line-height: 1.5;
+
+            color: #333;
+
+            margin-bottom: 10px;
+        }
+
+        .date-subquestion {
+            color: #888;
+
+            font-size: 16px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================================================
+           DATE OPTIONS
+        ========================================================= */
+
+        .date-options {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+
+            width: 100%;
+
+            max-width: 650px;
+
+            margin:
+                0 auto;
+        }
+
+
+        /* =========================================================
+           DATE OPTION
+        ========================================================= */
+
+        .date-option {
+            position: relative;
+
+            padding:
+                28px 20px;
+
+            border-radius: 22px;
+
+            background: white;
+
+            border:
+                2px solid
+                #ffd6df;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease,
+                border-color 0.3s ease;
+
+            min-height: 155px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .date-option:hover {
+            transform:
+                translateY(-6px);
+
+            border-color:
+                #ff7b94;
+
+            box-shadow:
+                0 15px 30px
+                rgba(
+                    255,
+                    77,
+                    109,
+                    0.15
+                );
+        }
+
+
+        /* =========================================================
+           OPTION ICON
+        ========================================================= */
+
+        .option-icon {
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================================================
+           OPTION TITLE
+        ========================================================= */
+
+        .option-title {
+            font-size: 18px;
+
+            font-weight: 600;
+
+            color: #333;
+
+            margin-bottom: 5px;
+        }
+
+        .option-small {
+            color: #999;
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================================
+           💗 CUTE POPUP
+        ========================================================= */
+
+        .option-popup {
+
+            position: absolute;
+
+            bottom:
+                calc(100% + 18px);
+
+            left: 50%;
+
+            transform:
+                translateX(-50%)
+                translateY(12px)
+                scale(0.96);
+
+            width: 350px;
+
+            min-height: 220px;
+
+            padding:
+                27px 32px 42px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #fffafb,
+                    #ffeef3
+                );
+
+            border:
+                3px solid
+                #ff9eb2;
+
+            border-radius:
+                26px;
+
+            box-shadow:
+
+                inset
+                0 0 0 2px
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.9
+                ),
+
+                0 12px 30px
+                rgba(
+                    255,
+                    77,
+                    109,
+                    0.20
+                );
+
+            color:
+                #4b3a3e;
+
+            font-size: 15px;
+
+            line-height: 1.65;
+
+            text-align: center;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transition:
+                opacity 0.3s ease,
+                transform 0.3s ease;
+
+            z-index: 200;
+        }
+
+
+        /* =========================================================
+           DASHED INNER BORDER
+        ========================================================= */
+
+        .option-popup::before {
+
+            content: "";
+
+            position: absolute;
+
+            inset: 7px;
+
+            border:
+                2px dashed
+                #ffb6c5;
+
+            border-radius:
+                18px;
+
+            pointer-events: none;
+
+            z-index: 1;
+        }
+
+
+        /* =========================================================
+           SPEECH BUBBLE TAIL
+        ========================================================= */
+
+        .option-popup::after {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            bottom: -14px;
+
+            transform:
+                translateX(-50%)
+                rotate(45deg);
+
+            width: 24px;
+
+            height: 24px;
+
+            background:
+                #fff1f4;
+
+            border-right:
+                3px solid
+                #ff9eb2;
+
+            border-bottom:
+                3px solid
+                #ff9eb2;
+
+            z-index: 0;
+        }
+
+
+        /* =========================================================
+           SHOW POPUP
+        ========================================================= */
+
+        .date-option:hover
+        .option-popup {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            transform:
+                translateX(-50%)
+                translateY(0)
+                scale(1);
+        }
+
+
+        /* =========================================================
+           POPUP TEXT
+        ========================================================= */
+
+        .popup-content {
+            position: relative;
+
+            z-index: 5;
+        }
+
+        .popup-heart {
+            font-size: 21px;
+
+            display: inline-block;
+
+            margin-right: 5px;
+
+            animation:
+                tinyHeart
+                1.2s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes tinyHeart {
+
+            0%,
+            100% {
+                transform:
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    scale(1.2);
+            }
+        }
+
+        .popup-highlight {
+            color:
+                #f04467;
+
+            font-weight:
+                700;
+        }
+
+
+        /* =========================================================
+           🐰 CUTE BUNNY
+        ========================================================= */
+
+        .popup-bunny {
+
+            position: absolute;
+
+            right: 13px;
+
+            bottom: 8px;
+
+            width: 58px;
+
+            height: 65px;
+
+            z-index: 10;
+
+            animation:
+                bunnyBounce
+                2.2s
+                ease-in-out
+                infinite;
+        }
+
+
+        @keyframes bunnyBounce {
+
+            0%,
+            100% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+            }
+
+            50% {
+                transform:
+                    translateY(-5px)
+                    rotate(2deg);
+            }
+        }
+
+
+        /* Bunny ears */
+
+        .bunny-ear {
+
+            fill: #fff;
+
+            stroke: #e78ca0;
+
+            stroke-width: 2;
+        }
+
+        .bunny-ear-inner {
+
+            fill: #ffc4d1;
+        }
+
+
+        /* Bunny face */
+
+        .bunny-face {
+
+            fill: #fff;
+
+            stroke: #e78ca0;
+
+            stroke-width: 2;
+        }
+
+
+        /* Bunny eyes */
+
+        .bunny-eye {
+
+            fill: #4b3a3e;
+        }
+
+
+        /* Bunny nose */
+
+        .bunny-nose {
+
+            fill: #ff8ca3;
+        }
+
+
+        /* Bunny cheeks */
+
+        .bunny-cheek {
+
+            fill: #ffb6c5;
+
+            opacity: 0.7;
+        }
+
+
+        /* Bunny heart */
+
+        .bunny-heart {
+
+            fill: #ff4d6d;
+
+            stroke: #e04462;
+
+            stroke-width: 1;
+        }
+
+
+        /* =========================================================
+           POPUP DECORATIONS
+        ========================================================= */
+
+        .popup-decoration {
+
+            position: absolute;
+
+            font-size: 21px;
+
+            z-index: 5;
+
+            pointer-events: none;
+        }
+
+        .popup-decoration.top-right {
+
+            top: 10px;
+
+            right: 15px;
+
+            transform:
+                rotate(12deg);
+        }
+
+        .popup-decoration.bottom-left {
+
+            bottom: 8px;
+
+            left: 13px;
+
+            transform:
+                rotate(-12deg);
+        }
+
+
+        /* =========================================================
+           SELECTED MESSAGE
+        ========================================================= */
+
+        #selectedMessage {
+
+            display: none;
+
+            margin-top: 25px;
+
+            padding:
+                15px 20px;
+
+            border-radius: 15px;
+
+            background:
+                #fff0f3;
+
+            color:
+                #d94b68;
+
+            font-size: 15px;
+
+            animation:
+                sectionAppear
+                0.5s
+                ease;
+        }
+
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        .footer {
+
+            margin-top: 30px;
+
+            color:
+                #bd7787;
+
+            font-size: 13px;
+
+            font-family:
+                "Segoe Print",
+                cursive;
+        }
+
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                align-items:
+                    flex-start;
+
+                padding:
+                    20px 0;
+
+                overflow-y:
+                    auto;
+
+                overflow-x:
+                    hidden;
+            }
+
+
+            .card {
+
+                width:
+                    92%;
+
+                min-height:
+                    620px;
+
+                padding:
+                    40px 20px;
+
+                border-radius:
+                    28px;
+
+                margin:
+                    20px 0;
+            }
+
+
+            .flower {
+
+                font-size:
+                    55px;
+
+                margin-bottom:
+                    15px;
+            }
+
+
+            .small-text {
+
+                font-size:
+                    11px;
+
+                letter-spacing:
+                    2px;
+            }
+
+
+            h1 {
+
+                font-size:
+                    34px;
+
+                margin-bottom:
+                    15px;
+            }
+
+
+            .message {
+
+                font-size:
+                    16px;
+
+                margin-bottom:
+                    30px;
+            }
+
+
+            .question-box {
+
+                min-height:
+                    220px;
+
+                padding:
+                    30px 15px;
+            }
+
+
+            .question {
+
+                font-size:
+                    21px;
+
+                margin-bottom:
+                    30px;
+            }
+
+
+            #yesBtn,
+            #noBtn {
+
+                font-size:
+                    16px;
+
+                padding:
+                    13px 25px;
+            }
+
+
+            /* DATE SECTION */
+
+            .happy-message {
+
+                font-size:
+                    16px;
+
+                line-height:
+                    1.7;
+            }
+
+
+            .date-question {
+
+                font-size:
+                    22px;
+            }
+
+
+            .date-subquestion {
+
+                font-size:
+                    14px;
+            }
+
+
+            .date-options {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    18px;
+            }
+
+
+            .date-option {
+
+                min-height:
+                    130px;
+            }
+
+
+            /* =====================================================
+               MOBILE POPUP
+            ===================================================== */
+
+            .option-popup {
+
+                bottom:
+                    auto;
+
+                top:
+                    calc(100% + 18px);
+
+                width:
+                    min(330px, 85vw);
+
+                min-height:
+                    220px;
+
+                padding:
+                    23px 24px 45px;
+
+                font-size:
+                    14px;
+            }
+
+
+            /* Mobile popup tail */
+
+            .option-popup::after {
+
+                top:
+                    -14px;
+
+                bottom:
+                    auto;
+
+                transform:
+                    translateX(-50%)
+                    rotate(225deg);
+
+                background:
+                    #fff1f4;
+
+                border-right:
+                    none;
+
+                border-bottom:
+                    3px solid
+                    #ff9eb2;
+
+                border-left:
+                    3px solid
+                    #ff9eb2;
+            }
+
+
+            .popup-bunny {
+
+                width:
+                    52px;
+
+                height:
+                    59px;
+
+                right:
+                    9px;
+
+                bottom:
+                    7px;
+            }
+
+
+            .date-option:hover {
+
+                transform:
+                    translateY(-4px);
+            }
+
+
+            .footer {
+
+                margin-top:
+                    25px;
+
+                font-size:
+                    12px;
+            }
+        }
+
+
+        /* =========================================================
+           SMALL PHONES
+        ========================================================= */
+
+        @media (max-width: 380px) {
+
+            .card {
+
+                width:
+                    94%;
+
+                padding:
+                    35px 15px;
+            }
+
+
+            h1 {
+
+                font-size:
+                    30px;
+            }
+
+
+            .question {
+
+                font-size:
+                    20px;
+            }
+
+
+            #yesBtn,
+            #noBtn {
+
+                padding:
+                    12px 22px;
+
+                font-size:
+                    15px;
+            }
+
+
+            .option-popup {
+
+                width:
+                    280px;
+
+                padding:
+                    20px 18px 42px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================================
+         FLOATING HEARTS
+    ========================================================= -->
+
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+    <div class="heart">♡</div>
+
+
+    <!-- =========================================================
+         MAIN CARD
+    ========================================================= -->
+
+    <div
+        class="card"
+        id="mainCard"
+    >
+
+
+        <!-- =====================================================
+             FIRST QUESTION
+        ===================================================== -->
+
+        <div id="questionSection">
+
+            <div class="flower">
+                🌷
+            </div>
+
+
+            <div class="small-text">
+                Just one little question
+            </div>
+
+
+            <h1>
+                Nethu... ❤️
+            </h1>
+
+
+            <p class="message">
+
+                I just need to ask you
+                something...
+
+            </p>
+
+
+            <div class="question-box">
+
+
+                <div class="question">
+
+                    Would you like to go on
+                    a date with me? ❤️
+
+                </div>
+
+
+                <div class="button-area">
+
+                    <button id="yesBtn">
+                        Yes ❤️
+                    </button>
+
+                </div>
+
+
+                <div id="message"></div>
+
+            </div>
+
+
+            <div class="footer">
+
+                made specially for you, Nethu ♡
+
+            </div>
+
+
+            <button id="noBtn">
+
+                No 🥺
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =====================================================
+             DATE SECTION
+        ===================================================== -->
+
+        <div id="dateSection">
+
+
+            <div class="flower">
+
+                💖
+
+            </div>
+
+
+            <div class="small-text">
+
+                You said yes!
+
+            </div>
+
+
+            <h1>
+
+                YAY!!! 🥰
+
+            </h1>
+
+
+            <div class="happy-message">
+
+                I knew you'd say yes, Nethu. ❤️
+
+                <br><br>
+
+                My exams are finally over...
+
+                <br>
+
+                <strong>
+                    but you still have your exams. 📚
+                </strong>
+
+                <br><br>
+
+                So I don't want to rush you.
+
+                <br>
+
+                <strong>
+                    You tell me the date and time.
+                </strong>
+
+                I'll be happy with whatever works
+                best for you. ❤️
+
+            </div>
+
+
+            <div class="date-question">
+
+                So... when should we go? 🌷
+
+            </div>
+
+
+            <div class="date-subquestion">
+
+                Choose whichever feels better for you ❤️
+
+            </div>
+
+
+            <!-- =================================================
+                 DATE OPTIONS
+            ================================================= -->
+
+            <div class="date-options">
+
+
+                <!-- =================================================
+                     OPTION 1
+                ================================================= -->
+
+                <div
+                    class="date-option"
+                    onclick="chooseDate('study')"
+                >
+
+                    <div class="option-icon">
+
+                        📚❤️
+
+                    </div>
+
+
+                    <div class="option-title">
+
+                        During my study leave
+
+                    </div>
+
+
+                    <div class="option-small">
+
+                        A little break before the exam
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CUTE POPUP
+                    ================================================= -->
+
+                    <div class="option-popup">
+
+
+                        <div class="popup-content">
+
+                            <span class="popup-heart">
+                                ❤️
+                            </span>
+
+                            If you choose this,
+
+                            <br>
+
+                            we can go
+                            <span class="popup-highlight">
+                                before your exam
+                            </span>
+                            📚
+
+                            <br><br>
+
+                            And if you like, we can always
+                            try another date
+                            <span class="popup-highlight">
+                                after your exam too.
+                            </span>
+
+                            🥰
+
+                        </div>
+
+
+                        <!-- =================================================
+                             CUTE BUNNY
+                        ================================================= -->
+
+                        <svg
+                            class="popup-bunny"
+                            viewBox="0 0 100 110"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+
+                            <!-- Left ear -->
+
+                            <ellipse
+                                class="bunny-ear"
+                                cx="37"
+                                cy="28"
+                                rx="13"
+                                ry="30"
+                                transform="rotate(-12 37 28)"
+                            />
+
+                            <ellipse
+                                class="bunny-ear-inner"
+                                cx="37"
+                                cy="28"
+                                rx="6"
+                                ry="21"
+                                transform="rotate(-12 37 28)"
+                            />
+
+
+                            <!-- Right ear -->
+
+                            <ellipse
+                                class="bunny-ear"
+                                cx="63"
+                                cy="28"
+                                rx="13"
+                                ry="30"
+                                transform="rotate(12 63 28)"
+                            />
+
+                            <ellipse
+                                class="bunny-ear-inner"
+                                cx="63"
+                                cy="28"
+                                rx="6"
+                                ry="21"
+                                transform="rotate(12 63 28)"
+                            />
+
+
+                            <!-- Face -->
+
+                            <circle
+                                class="bunny-face"
+                                cx="50"
+                                cy="63"
+                                r="30"
+                            />
+
+
+                            <!-- Eyes -->
+
+                            <circle
+                                class="bunny-eye"
+                                cx="40"
+                                cy="60"
+                                r="3"
+                            />
+
+                            <circle
+                                class="bunny-eye"
+                                cx="60"
+                                cy="60"
+                                r="3"
+                            />
+
+
+                            <!-- Cheeks -->
+
+                            <ellipse
+                                class="bunny-cheek"
+                                cx="32"
+                                cy="69"
+                                rx="7"
+                                ry="4"
+                            />
+
+                            <ellipse
+                                class="bunny-cheek"
+                                cx="68"
+                                cy="69"
+                                rx="7"
+                                ry="4"
+                            />
+
+
+                            <!-- Nose -->
+
+                            <path
+                                class="bunny-nose"
+                                d="
+                                    M46 66
+                                    Q50 62 54 66
+                                    Q50 72 46 66
+                                "
+                            />
+
+
+                            <!-- Smile -->
+
+                            <path
+                                d="
+                                    M50 69
+                                    Q46 76 42 72
+                                "
+                                fill="none"
+                                stroke="#6b4650"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+
+                            <path
+                                d="
+                                    M50 69
+                                    Q54 76 58 72
+                                "
+                                fill="none"
+                                stroke="#6b4650"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+
+
+                            <!-- Little heart -->
+
+                            <path
+                                class="bunny-heart"
+                                d="
+                                    M50 94
+                                    C44 87 33 92 37 100
+                                    C40 105 50 110 50 110
+                                    C50 110 60 105 63 100
+                                    C67 92 56 87 50 94
+                                    Z
+                                "
+                            />
+
+                        </svg>
+
+
+                        <div class="popup-decoration top-right">
+                            💗
+                        </div>
+
+
+                        <div class="popup-decoration bottom-left">
+                            💕
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     OPTION 2
+                ================================================= -->
+
+                <div
+                    class="date-option"
+                    onclick="chooseDate('after')"
+                >
+
+                    <div class="option-icon">
+
+                        🎓❤️
+
+                    </div>
+
+
+                    <div class="option-title">
+
+                        After my exams
+
+                    </div>
+
+
+                    <div class="option-small">
+
+                        No rush — take your time
+
+                    </div>
+
+
+                    <!-- =================================================
+                         CUTE POPUP
+                    ================================================= -->
+
+                    <div class="option-popup">
+
+
+                        <div class="popup-content">
+
+                            <span class="popup-heart">
+                                ❤️
+                            </span>
+
+                            I'll give you more time
+                            to
+
+                            <span class="popup-highlight">
+                                study well.
+                            </span>
+
+                            📚
+
+                            <br><br>
+
+                            Then we can forget about
+                            the exam stress and enjoy
+                            a sweet café date...
+
+                            <br><br>
+
+                            Maybe some
+                            <span class="popup-highlight">
+                                cheesecake?
+                            </span>
+
+                            🍰☕❤️
+
+                        </div>
+
+
+                        <!-- =================================================
+                             CUTE BUNNY
+                        ================================================= -->
+
+                        <svg
+                            class="popup-bunny"
+                            viewBox="0 0 100 110"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                        >
+
+                            <!-- Left ear -->
+
+                            <ellipse
+                                class="bunny-ear"
+                                cx="37"
+                                cy="28"
+                                rx="13"
+                                ry="30"
+                                transform="rotate(-12 37 28)"
+                            />
+
+                            <ellipse
+                                class="bunny-ear-inner"
+                                cx="37"
+                                cy="28"
+                                rx="6"
+                                ry="21"
+                                transform="rotate(-12 37 28)"
+                            />
+
+
+                            <!-- Right ear -->
+
+                            <ellipse
+                                class="bunny-ear"
+                                cx="63"
+                                cy="28"
+                                rx="13"
+                                ry="30"
+                                transform="rotate(12 63 28)"
+                            />
+
+                            <ellipse
+                                class="bunny-ear-inner"
+                                cx="63"
+                                cy="28"
+                                rx="6"
+                                ry="21"
+                                transform="rotate(12 63 28)"
+                            />
+
+
+                            <!-- Face -->
+
+                            <circle
+                                class="bunny-face"
+                                cx="50"
+                                cy="63"
+                                r="30"
+                            />
+
+
+                            <!-- Eyes -->
+
+                            <circle
+                                class="bunny-eye"
+                                cx="40"
+                                cy="60"
+                                r="3"
+                            />
+
+                            <circle
+                                class="bunny-eye"
+                                cx="60"
+                                cy="60"
+                                r="3"
+                            />
+
+
+                            <!-- Cheeks -->
+
+                            <ellipse
+                                class="bunny-cheek"
+                                cx="32"
+                                cy="69"
+                                rx="7"
+                                ry="4"
+                            />
+
+                            <ellipse
+                                class="bunny-cheek"
+                                cx="68"
+                                cy="69"
+                                rx="7"
+                                ry="4"
+                            />
+
+
+                            <!-- Nose -->
+
+                            <path
+                                class="bunny-nose"
+                                d="
+                                    M46 66
+                                    Q50 62 54 66
+                                    Q50 72 46 66
+                                "
+                            />
+
+
+                            <!-- Smile -->
+
+                            <path
+                                d="
+                                    M50 69
+                                    Q46 76 42 72
+                                "
+                                fill="none"
+                                stroke="#6b4650"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+
+                            <path
+                                d="
+                                    M50 69
+                                    Q54 76 58 72
+                                "
+                                fill="none"
+                                stroke="#6b4650"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                            />
+
+
+                            <!-- Little heart -->
+
+                            <path
+                                class="bunny-heart"
+                                d="
+                                    M50 94
+                                    C44 87 33 92 37 100
+                                    C40 105 50 110 50 110
+                                    C50 110 60 105 63 100
+                                    C67 92 56 87 50 94
+                                    Z
+                                "
+                            />
+
+                        </svg>
+
+
+                        <div class="popup-decoration top-right">
+                            💗
+                        </div>
+
+
+                        <div class="popup-decoration bottom-left">
+                            ✨
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+                 SELECTED MESSAGE
+            ===================================================== -->
+
+            <div id="selectedMessage"></div>
+
+
+            <div class="footer">
+
+                Take your time, Nethu ❤️
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================================
+         JAVASCRIPT
+    ========================================================= -->
+
+    <script>
+
+
+        /* =========================================================
+           ELEMENTS
+        ========================================================= */
+
+        const card =
+            document.getElementById(
+                "mainCard"
+            );
+
+
+        const noBtn =
+            document.getElementById(
+                "noBtn"
+            );
+
+
+        const yesBtn =
+            document.getElementById(
+                "yesBtn"
+            );
+
+
+        const noMessage =
+            document.getElementById(
+                "message"
+            );
+
+
+        const questionSection =
+            document.getElementById(
+                "questionSection"
+            );
+
+
+        const dateSection =
+            document.getElementById(
+                "dateSection"
+            );
+
+
+        const selectedMessage =
+            document.getElementById(
+                "selectedMessage"
+            );
+
+
+
+        /* =========================================================
+           NO BUTTON MESSAGES
+        ========================================================= */
+
+        const messages = [
+
+            "Are you sure, Nethu? 🥺",
+
+            "Think again... 😭",
+
+            "Really? 🥹",
+
+            "You almost caught me! 😂",
+
+            "Nethu... give me a chance ❤️",
+
+            "I don't think you meant that 😭",
+
+            "Try again? 🥺❤️",
+
+            "No is not looking like a good option 😌",
+
+            "Okay... I'll keep running 😂❤️",
+
+            "Maybe Yes is easier? 👀❤️"
+
+        ];
+
+
+        let attempts = 0;
+
+
+
+        /* =========================================================
+           MOVE NO BUTTON
+        ========================================================= */
+
+        function moveNoButton() {
+
+            noMessage.textContent =
+                messages[
+                    attempts %
+                    messages.length
+                ];
+
+            attempts++;
+
+
+            const cardWidth =
+                card.clientWidth;
+
+            const cardHeight =
+                card.clientHeight;
+
+
+            const buttonWidth =
+                noBtn.offsetWidth;
+
+            const buttonHeight =
+                noBtn.offsetHeight;
+
+
+            const padding = 25;
+
+
+            const maxX =
+                cardWidth -
+                buttonWidth -
+                padding;
+
+
+            const maxY =
+                cardHeight -
+                buttonHeight -
+                padding;
+
+
+            const randomX =
+                padding +
+                Math.random() *
+                Math.max(
+                    0,
+                    maxX - padding
+                );
+
+
+            const randomY =
+                padding +
+                Math.random() *
+                Math.max(
+                    0,
+                    maxY - padding
+                );
+
+
+            noBtn.style.left =
+                randomX + "px";
+
+
+            noBtn.style.top =
+                randomY + "px";
+        }
+
+
+
+        /* =========================================================
+           DESKTOP NO BUTTON
+        ========================================================= */
+
+        noBtn.addEventListener(
+            "mouseenter",
+            moveNoButton
+        );
+
+
+
+        /* =========================================================
+           MOBILE NO BUTTON
+        ========================================================= */
+
+        noBtn.addEventListener(
+            "touchstart",
+
+            function(event) {
+
+                event.preventDefault();
+
+                moveNoButton();
+
+            },
+
+            {
+                passive: false
+            }
+        );
+
+
+
+        /* =========================================================
+           NO CLICK PROTECTION
+        ========================================================= */
+
+        noBtn.addEventListener(
+            "click",
+
+            function(event) {
+
+                event.preventDefault();
+
+                moveNoButton();
+
+            }
+        );
+
+
+
+        /* =========================================================
+           YES BUTTON
+        ========================================================= */
+
+        yesBtn.addEventListener(
+            "click",
+
+            function() {
+
+                questionSection.style.display =
+                    "none";
+
+
+                noBtn.style.display =
+                    "none";
+
+
+                dateSection.style.display =
+                    "block";
+
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+
+
+        /* =========================================================
+           DATE OPTION
+        ========================================================= */
+
+        function chooseDate(option) {
+
+            /*
+             * Save her timing choice so the cafe page can use it later.
+             * "study"  = During my study leave
+             * "after"  = After my exams
+             */
+            try {
+                localStorage.setItem("dateTiming", option);
+            } catch (error) {
+                console.warn("Could not save date timing:", error);
+            }
+
+            /*
+             * Open the cafe selection page.
+             * Both timing choices lead to the same cafe.html page.
+             */
+            window.location.href = "cafe.html";
+        }
+
+    </script>
+
+</body>
+
+</html>

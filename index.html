@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>For Nethu ❤️</title>
+
+
+    <style>
+
+        /* =====================================
+           RESET
+        ===================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        /* =====================================
+           BODY
+        ===================================== */
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family:
+                "Segoe UI",
+                Arial,
+                sans-serif;
+
+            overflow-x: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffdfe6,
+                    #f7a9bb
+                );
+
+            position: relative;
+        }
+
+
+        /* =====================================
+           FLOATING HEARTS
+        ===================================== */
+
+        .floating-heart {
+
+            position: fixed;
+
+            bottom: -40px;
+
+            color:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.65
+                );
+
+            font-size: 25px;
+
+            pointer-events: none;
+
+            animation:
+                floatUp
+                7s
+                linear
+                infinite;
+        }
+
+
+        .floating-heart:nth-child(1) {
+            left: 8%;
+            animation-delay: 0s;
+            font-size: 20px;
+        }
+
+        .floating-heart:nth-child(2) {
+            left: 22%;
+            animation-delay: 2s;
+            font-size: 18px;
+        }
+
+        .floating-heart:nth-child(3) {
+            left: 45%;
+            animation-delay: 4s;
+            font-size: 30px;
+        }
+
+        .floating-heart:nth-child(4) {
+            left: 70%;
+            animation-delay: 1s;
+            font-size: 20px;
+        }
+
+        .floating-heart:nth-child(5) {
+            left: 88%;
+            animation-delay: 3s;
+            font-size: 28px;
+        }
+
+
+        @keyframes floatUp {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 0.8;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    rotate(25deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =====================================
+           MAIN CARD
+        ===================================== */
+
+        .card {
+
+            width: 92%;
+
+            /*
+             * Increased from 650px
+             * so the longer sentences
+             * have enough room.
+             */
+
+            max-width: 760px;
+
+            padding:
+                45px 45px 40px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.94
+                );
+
+            border-radius: 32px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(
+                    130,
+                    55,
+                    75,
+                    0.20
+                );
+
+            text-align: center;
+
+            position: relative;
+
+            z-index: 5;
+
+            animation:
+                cardEnter
+                1s
+                ease;
+        }
+
+
+        @keyframes cardEnter {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(35px)
+                    scale(0.94);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0)
+                    scale(1);
+            }
+        }
+
+
+        /* =====================================
+           TOP LABEL
+        ===================================== */
+
+        .little-label {
+
+            font-size: 13px;
+
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            color:
+                #c45b73;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================
+           PHOTOS
+        ===================================== */
+
+        .photos {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 25px;
+
+            margin-bottom: 25px;
+        }
+
+
+        .photo-card {
+
+            width: 190px;
+
+            background: white;
+
+            padding:
+                10px 10px 15px;
+
+            box-shadow:
+                0 10px 25px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.12
+                );
+
+            transition:
+                transform 0.3s ease;
+        }
+
+
+        .photo-card:first-child {
+
+            transform:
+                rotate(-5deg);
+        }
+
+
+        .photo-card:last-child {
+
+            transform:
+                rotate(5deg);
+        }
+
+
+        .photo-card:hover {
+
+            transform:
+                rotate(0deg)
+                translateY(-7px)
+                scale(1.03);
+        }
+
+
+        .photo-card img {
+
+            width: 100%;
+
+            height: 180px;
+
+            object-fit: cover;
+
+            display: block;
+
+            border-radius: 3px;
+        }
+
+
+        .photo-name {
+
+            margin-top: 10px;
+
+            font-size: 19px;
+
+            font-family:
+                "Segoe Print",
+                "Comic Sans MS",
+                cursive;
+
+            color:
+                #333;
+        }
+
+
+        /* =====================================
+           HEART BETWEEN PHOTOS
+        ===================================== */
+
+        .between-heart {
+
+            font-size: 30px;
+
+            color:
+                #ff4d6d;
+
+            animation:
+                heartbeat
+                1.5s
+                ease-in-out
+                infinite;
+        }
+
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+
+                transform:
+                    scale(1);
+            }
+
+            50% {
+
+                transform:
+                    scale(1.2);
+            }
+        }
+
+
+        /* =====================================
+           HEADING
+        ===================================== */
+
+        h1 {
+
+            font-family:
+                "Segoe Print",
+                "Comic Sans MS",
+                cursive;
+
+            font-size: 42px;
+
+            color:
+                #292929;
+
+            margin-bottom: 8px;
+        }
+
+
+        .subtitle {
+
+            color:
+                #c24e68;
+
+            font-size: 14px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =====================================
+           PERSONAL MESSAGE
+        ===================================== */
+
+        .message {
+
+            /*
+             * Use almost the full width
+             * of the wider card.
+             */
+
+            width: 100%;
+
+            max-width: 700px;
+
+            margin:
+                0 auto 30px;
+
+            padding:
+                25px 20px;
+
+            background:
+                #fff7f8;
+
+            border:
+                1px solid
+                #ffd8df;
+
+            border-radius: 20px;
+
+            color:
+                #555;
+
+            font-size: 16px;
+
+            line-height: 1.8;
+
+            /*
+             * Keep each sentence
+             * on one line on desktop.
+             */
+
+            white-space: nowrap;
+        }
+
+
+        /* =====================================
+           MESSAGE LINES
+        ===================================== */
+
+        .message-line {
+
+            display: block;
+
+            margin-bottom: 5px;
+        }
+
+
+        .message-line:last-child {
+
+            margin-bottom: 0;
+        }
+
+
+        .message strong {
+
+            color:
+                #f04467;
+        }
+
+
+        /* =====================================
+           CONTINUE BUTTON
+        ===================================== */
+
+        .continue-btn {
+
+            border: none;
+
+            padding:
+                15px 38px;
+
+            border-radius: 50px;
+
+            background:
+                #ff4d6d;
+
+            color: white;
+
+            font-size: 17px;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 10px 25px
+                rgba(
+                    255,
+                    77,
+                    109,
+                    0.30
+                );
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+        }
+
+
+        .continue-btn:hover {
+
+            transform:
+                translateY(-3px)
+                scale(1.04);
+
+            box-shadow:
+                0 14px 30px
+                rgba(
+                    255,
+                    77,
+                    109,
+                    0.40
+                );
+        }
+
+
+        /* =====================================
+           FOOTER
+        ===================================== */
+
+        .footer {
+
+            margin-top: 25px;
+
+            color:
+                #b87886;
+
+            font-size: 13px;
+
+            font-family:
+                "Segoe Print",
+                cursive;
+        }
+
+
+        /* =====================================
+           TABLET
+        ===================================== */
+
+        @media (max-width: 800px) {
+
+            .card {
+
+                width: 94%;
+
+                max-width: 700px;
+
+                padding:
+                    40px 30px 35px;
+            }
+
+
+            .message {
+
+                max-width: 100%;
+
+                font-size: 15px;
+            }
+
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 600px) {
+
+            body {
+
+                align-items: center;
+
+                overflow-y: auto;
+            }
+
+
+            .card {
+
+                width: 92%;
+
+                padding:
+                    32px 20px;
+
+                border-radius: 28px;
+
+                margin:
+                    20px 0;
+            }
+
+
+            /* Photos */
+
+            .photos {
+
+                gap: 10px;
+
+                align-items: center;
+            }
+
+
+            .photo-card {
+
+                width: 135px;
+
+                padding:
+                    7px 7px 11px;
+            }
+
+
+            .photo-card img {
+
+                height: 135px;
+            }
+
+
+            .photo-name {
+
+                font-size: 16px;
+
+                margin-top: 8px;
+            }
+
+
+            .between-heart {
+
+                font-size: 22px;
+            }
+
+
+            /* Heading */
+
+            h1 {
+
+                font-size: 32px;
+
+                margin-bottom: 8px;
+            }
+
+
+            .little-label {
+
+                font-size: 11px;
+
+                letter-spacing: 3px;
+
+                margin-bottom: 20px;
+            }
+
+
+            .subtitle {
+
+                font-size: 12px;
+
+                letter-spacing: 2px;
+
+                margin-bottom: 20px;
+            }
+
+
+            /* Message */
+
+            .message {
+
+                width: 100%;
+
+                max-width: 100%;
+
+                padding:
+                    20px 17px;
+
+                font-size: 15px;
+
+                line-height: 1.7;
+
+                /*
+                 * Allow wrapping on phones.
+                 */
+
+                white-space: normal;
+            }
+
+
+            .message-line {
+
+                margin-bottom: 8px;
+            }
+
+
+            /* Continue */
+
+            .continue-btn {
+
+                padding:
+                    14px 32px;
+
+                font-size: 16px;
+            }
+
+
+            .footer {
+
+                font-size: 12px;
+
+                margin-top: 20px;
+            }
+
+        }
+
+
+        /* =====================================
+           VERY SMALL PHONES
+        ===================================== */
+
+        @media (max-width: 380px) {
+
+            .photos {
+
+                gap: 5px;
+            }
+
+
+            .photo-card {
+
+                width: 115px;
+            }
+
+
+            .photo-card img {
+
+                height: 115px;
+            }
+
+
+            .between-heart {
+
+                font-size: 18px;
+            }
+
+
+            h1 {
+
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         FLOATING HEARTS
+    ===================================== -->
+
+    <div class="floating-heart">♡</div>
+    <div class="floating-heart">♡</div>
+    <div class="floating-heart">♡</div>
+    <div class="floating-heart">♡</div>
+    <div class="floating-heart">♡</div>
+
+
+    <!-- =====================================
+         MAIN CARD
+    ===================================== -->
+
+    <div class="card">
+
+
+        <!-- TOP LABEL -->
+
+        <div class="little-label">
+
+            A little something for you
+
+        </div>
+
+
+        <!-- =================================
+             PHOTOS
+        ================================= -->
+
+        <div class="photos">
+
+
+            <!-- NETHU -->
+
+            <div class="photo-card">
+
+                <img
+                    src="images/Nethu.png"
+                    alt="Nethu"
+                >
+
+                <div class="photo-name">
+
+                    Nethu ♡
+
+                </div>
+
+            </div>
+
+
+            <!-- HEART -->
+
+            <div class="between-heart">
+
+                ❤️
+
+            </div>
+
+
+            <!-- SHARK -->
+
+            <div class="photo-card">
+
+                <img
+                    src="images/Shark.png"
+                    alt="Shark"
+                >
+
+                <div class="photo-name">
+
+                    Shark ♡
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             TITLE
+        ================================= -->
+
+        <h1>
+
+            Hey Nethu ❤️
+
+        </h1>
+
+
+        <div class="subtitle">
+
+            I made this just for you
+
+        </div>
+
+
+        <!-- =================================
+             PERSONAL MESSAGE
+        ================================= -->
+
+        <div class="message">
+
+
+            <!-- LINE 1 -->
+
+            <div class="message-line">
+
+                You are the
+                <strong>gorgeous</strong>
+                and
+                <strong>most beautiful girl</strong>
+                I have ever seen. ❤️
+
+            </div>
+
+
+            <!-- LINE 2 -->
+
+            <div class="message-line">
+
+                There is something about you
+                that makes you really special
+                to me.
+
+            </div>
+
+
+            <!-- LINE 3 -->
+
+            <div class="message-line">
+
+                So I wanted to make something
+                <strong>especially for you.</strong>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================
+             CONTINUE BUTTON
+        ================================= -->
+
+        <button
+            class="continue-btn"
+            onclick="continueToQuestion()"
+        >
+
+            Continue ❤️ →
+
+        </button>
+
+
+        <!-- =================================
+             FOOTER
+        ================================= -->
+
+        <div class="footer">
+
+            made with ❤️ specially for Nethu
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =====================================
+         JAVASCRIPT
+    ===================================== -->
+
+    <script>
+
+        function continueToQuestion() {
+
+            window.location.href =
+                "question.html";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

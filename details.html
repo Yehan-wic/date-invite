@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>When should we go? ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;font-family:"Segoe UI",Arial,sans-serif;background:linear-gradient(135deg,#ffdce3,#f3a5b8);padding:25px 15px;color:#333}
+.hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden}.heart{position:absolute;bottom:-40px;color:rgba(255,255,255,.7);animation:float 8s linear infinite}
+@keyframes float{to{transform:translateY(-115vh) rotate(20deg);opacity:0}}
+.card{width:min(720px,100%);margin:25px auto;background:rgba(255,255,255,.97);border-radius:32px;padding:42px 38px;box-shadow:0 25px 65px rgba(100,40,60,.18);position:relative}
+.top{text-align:center}.kicker{color:#c25a72;letter-spacing:4px;font-size:13px;margin-bottom:10px}.flower{font-size:52px}
+h1{font-family:"Segoe Print","Comic Sans MS",cursive;font-size:clamp(31px,6vw,45px);margin:8px 0 12px}
+.sub{color:#777;font-size:17px;line-height:1.6}.summary{margin:25px 0;padding:18px;border-radius:20px;background:#fff4f7;border:1px solid #ffd2de;text-align:center;color:#b64e6c;line-height:1.7}
+form{margin-top:25px}.field{margin-bottom:22px}.field label{display:block;color:#555;font-weight:700;margin-bottom:9px}
+input,select{width:100%;padding:15px 16px;border:2px solid #ffd2de;border-radius:16px;background:#fff;font-size:16px;outline:none;transition:.2s}
+input:focus,select:focus{border-color:#f47b98;box-shadow:0 0 0 4px rgba(244,123,152,.12)}
+.submit{width:100%;border:0;border-radius:35px;padding:17px 22px;background:#ef6c8b;color:#fff;font-size:18px;font-weight:700;cursor:pointer;box-shadow:0 12px 28px rgba(255,77,109,.2);transition:.25s}
+.submit:hover{transform:translateY(-2px);background:#e7587c}
+.note{text-align:center;color:#a76b7d;font-size:13px;margin-top:14px}
+.back{display:block;text-align:center;margin-top:17px;color:#d55273;text-decoration:none;font-weight:600}
+@media(max-width:600px){.card{padding:32px 20px;border-radius:25px}}
+</style>
+</head>
+<body>
+<div class="hearts">
+  <span class="heart" style="left:8%;animation-delay:0s;font-size:24px">♡</span>
+  <span class="heart" style="left:28%;animation-delay:2s;font-size:31px">♡</span>
+  <span class="heart" style="left:58%;animation-delay:4s;font-size:20px">♡</span>
+  <span class="heart" style="left:85%;animation-delay:1s;font-size:27px">♡</span>
+</div>
+
+<main class="card">
+  <div class="top">
+    <div class="flower">🌷</div>
+    <div class="kicker">THE LAST LITTLE DETAIL ❤️</div>
+    <h1>When should we go?</h1>
+    <p class="sub">Choose a date and time that feels good for you.</p>
+  </div>
+
+  <div class="summary">
+    <div><strong>When:</strong> <span id="timingLabel">—</span></div>
+    <div><strong>Café:</strong> <span id="cafeLabel">—</span></div>
+  </div>
+
+  <form id="dateForm" method="POST">
+    <input type="hidden" name="_subject" value="Nethu chose a date ❤️">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" id="nextUrl">
+    <input type="hidden" name="Date timing" id="timingField">
+    <input type="hidden" name="Café choice" id="cafeField">
+
+    <div class="field">
+      <label for="date">📅 Pick the date</label>
+      <input id="date" name="Date" type="date" required>
+    </div>
+
+    <div class="field">
+      <label for="time">🕐 Pick the time</label>
+      <select id="time" name="Time" required>
+        <option value="">Choose a time...</option>
+        <option>10:00 AM</option><option>10:30 AM</option>
+        <option>11:00 AM</option><option>11:30 AM</option>
+        <option>12:00 PM</option><option>12:30 PM</option>
+        <option>1:00 PM</option><option>1:30 PM</option>
+        <option>2:00 PM</option><option>2:30 PM</option>
+        <option>3:00 PM</option><option>3:30 PM</option>
+        <option>4:00 PM</option><option>4:30 PM</option>
+        <option>5:00 PM</option><option>5:30 PM</option>
+        <option>6:00 PM</option><option>6:30 PM</option>
+        <option>7:00 PM</option><option>7:30 PM</option>
+        <option>8:00 PM</option><option>8:30 PM</option>
+        <option>9:00 PM</option>
+      </select>
+    </div>
+
+    <button class="submit" type="submit">This is my choice ❤️</button>
+    <p class="note">I'll get an email with your café, timing, date and time. 🥰</p>
+  </form>
+
+  <a class="back" href="cafe.html">← Change café</a>
+</main>
+
+<script src="config.js"></script>
+<script>
+const timingMap = {study:"During my study leave 📚", after:"After my exams 🎓"};
+const timing = localStorage.getItem("dateTiming") || "";
+const cafe = localStorage.getItem("selectedCafe") || "";
+
+document.getElementById("timingLabel").textContent = timingMap[timing] || "Not selected";
+document.getElementById("cafeLabel").textContent = cafe || "Not selected";
+document.getElementById("timingField").value = timingMap[timing] || timing || "Not selected";
+document.getElementById("cafeField").value = cafe || "Not selected";
+
+const dateInput = document.getElementById("date");
+const today = new Date();
+const yyyy = today.getFullYear();
+const mm = String(today.getMonth()+1).padStart(2,"0");
+const dd = String(today.getDate()).padStart(2,"0");
+dateInput.min = `${yyyy}-${mm}-${dd}`;
+
+const form = document.getElementById("dateForm");
+form.action = `https://formsubmit.co/${FORM_EMAIL}`;
+document.getElementById("nextUrl").value = `${SITE_URL}/thankyou.html`;
+
+form.addEventListener("submit", (e) => {
+  if (FORM_EMAIL === "YOUR_EMAIL@example.com" || SITE_URL.includes("YOUR-USERNAME")) {
+    e.preventDefault();
+    alert("Before sending, open config.js and replace YOUR_EMAIL@example.com and YOUR-USERNAME with your real details.");
+  }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where should we go? ❤️</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  min-height:100vh;font-family:"Segoe UI",Arial,sans-serif;
+  background:linear-gradient(135deg,#ffdce3,#f3a5b8);
+  padding:34px 18px;color:#333;overflow-x:hidden;
+}
+.heart{position:fixed;bottom:-40px;color:rgba(255,255,255,.7);
+  animation:float 8s linear infinite;pointer-events:none;z-index:0}
+.h1{left:8%;font-size:22px}.h2{left:28%;font-size:30px;animation-delay:2s}
+.h3{left:60%;font-size:19px;animation-delay:4s}.h4{left:85%;font-size:27px;animation-delay:1s}
+@keyframes float{0%{transform:translateY(0);opacity:0}15%{opacity:.8}100%{transform:translateY(-110vh) rotate(20deg);opacity:0}}
+.wrapper{
+  width:min(1450px,100%);margin:auto;background:rgba(255,255,255,.97);
+  border-radius:32px;padding:42px 34px 48px;position:relative;z-index:2;
+  box-shadow:0 25px 65px rgba(100,40,60,.18);
+}
+.top{text-align:center;margin-bottom:34px}
+.kicker{color:#c25a72;letter-spacing:4px;font-size:13px;text-transform:uppercase;margin-bottom:10px}
+h1{font-family:"Segoe Print","Comic Sans MS",cursive;font-size:clamp(34px,5vw,52px);color:#292929}
+.subtitle{margin-top:10px;color:#777;font-size:17px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.card{
+  border:2px solid #f5bfd0;border-radius:28px;overflow:hidden;background:#fff;
+  transition:.3s ease;display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 38px rgba(255,77,109,.16);border-color:#ff8daa}
+.card.selected{border-color:#ff4d6d;box-shadow:0 0 0 4px rgba(255,77,109,.12),0 18px 38px rgba(255,77,109,.18)}
+.photo{height:275px;background:linear-gradient(135deg,#ffe7ed,#f7b3c5);position:relative;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.fallback{display:none;position:absolute;inset:0;align-items:center;justify-content:center;font-size:70px}
+.photo.image-fallback .fallback{display:flex}
+.photo.image-fallback img{display:none}
+.info{padding:27px 27px 24px;flex:1;display:flex;flex-direction:column}
+.option{color:#e84d76;letter-spacing:3px;font-size:13px;margin-bottom:12px}
+.name{font-family:"Segoe Print","Comic Sans MS",cursive;color:#e83f6d;font-size:30px;line-height:1.15;margin-bottom:15px}
+.desc{color:#777;font-size:17px;line-height:1.55;min-height:78px}
+.choose{
+  margin-top:22px;border:0;border-radius:30px;padding:13px 23px;
+  background:#ffeaf0;color:#df3763;font-size:16px;font-weight:700;cursor:pointer;
+  align-self:flex-start;transition:.25s
+}
+.choose:hover{background:#ffd4e1;transform:scale(1.04)}
+.card.selected .choose{background:#ff4d6d;color:#fff}
+.bottom{text-align:center;margin-top:42px}
+#continue{
+  width:min(430px,100%);border:0;border-radius:40px;padding:19px 28px;
+  background:#f5c2d4;color:white;font-size:19px;font-weight:700;
+  cursor:not-allowed;box-shadow:0 10px 25px rgba(255,77,109,.12);transition:.3s
+}
+#continue.enabled{background:#ee6b8b;cursor:pointer;box-shadow:0 12px 28px rgba(255,77,109,.22)}
+#continue.enabled:hover{transform:translateY(-3px) scale(1.02);background:#e9577a}
+.hint{margin-top:18px;color:#c8758c;font-family:"Segoe Print","Comic Sans MS",cursive;font-size:17px}
+.timing{display:inline-block;margin-top:8px;padding:8px 15px;border-radius:20px;background:#fff2f6;color:#bd5b76;font-size:14px}
+@media(max-width:1050px){.cards{grid-template-columns:1fr;max-width:600px;margin:auto}.photo{height:300px}}
+@media(max-width:600px){body{padding:14px}.wrapper{padding:28px 15px 36px;border-radius:25px}.photo{height:240px}.name{font-size:27px}}
+</style>
+</head>
+<body>
+<div class="heart h1">♡</div><div class="heart h2">♡</div><div class="heart h3">♡</div><div class="heart h4">♡</div>
+
+<main class="wrapper">
+  <div class="top">
+    <div class="kicker">ONE MORE LITTLE CHOICE ❤️</div>
+    <h1>Where should we go? ☕</h1>
+    <p class="subtitle">Pick the café you'd like for our date.</p>
+    <div id="timingText" class="timing"></div>
+  </div>
+
+  <section class="cards">
+    <article class="card" data-cafe="Crusté & Co. by Finagle">
+      <div class="photo">
+        <img src="images/cruste-food.png" alt="Croissant and coffee at Crusté & Co." onerror="this.parentElement.classList.add('image-fallback')">
+        <div class="fallback">🥐☕</div>
+      </div>
+      <div class="info">
+        <div class="option">OPTION 01</div>
+        <div class="name">Crusté &amp; Co.</div>
+        <div class="desc">Croissant + coffee... 🥐☕<br>A warm little café date with something freshly baked.</div>
+        <button class="choose" type="button">Choose me 🥐</button>
+      </div>
+    </article>
+
+    <article class="card" data-cafe="Simply Strawberries by Jagro">
+      <div class="photo">
+        <img src="images/strawberries-cheesecake.png" alt="Strawberry cheesecake at Simply Strawberries" onerror="this.parentElement.classList.add('image-fallback')">
+        <div class="fallback">🍓🍰</div>
+      </div>
+      <div class="info">
+        <div class="option">OPTION 02</div>
+        <div class="name">Simply Strawberries</div>
+        <div class="desc">Strawberry cheesecake... 🍓🍰<br>Sweet, cute and probably impossible to say no to.</div>
+        <button class="choose" type="button">Choose me 🍓</button>
+      </div>
+    </article>
+
+    <article class="card" data-cafe="Latte Ceylon">
+      <div class="photo">
+        <img src="images/latte-tacos.png" alt="Tacos and coffee at Latte Ceylon" onerror="this.parentElement.classList.add('image-fallback')">
+        <div class="fallback">🌮☕</div>
+      </div>
+      <div class="info">
+        <div class="option">OPTION 03</div>
+        <div class="name">Latte Ceylon</div>
+        <div class="desc">Tacos! 🌮❤️<br>Something a little different for our café date.</div>
+        <button class="choose" type="button">Choose me 🌮</button>
+      </div>
+    </article>
+  </section>
+
+  <div class="bottom">
+    <button id="continue" type="button">Let's date ❤️</button>
+    <div class="hint">Pick one for us, Nethu ❤️</div>
+  </div>
+</main>
+
+<script>
+const labels = {
+  study: "During my study leave 📚",
+  after: "After my exams 🎓"
+};
+
+const timing = localStorage.getItem("dateTiming");
+const timingText = document.getElementById("timingText");
+timingText.textContent = timing && labels[timing] ? "When: " + labels[timing] : "When: not selected";
+
+let selectedCafe = localStorage.getItem("selectedCafe") || "";
+const cards = document.querySelectorAll(".card");
+const continueBtn = document.getElementById("continue");
+
+function refresh() {
+  cards.forEach(card => card.classList.toggle("selected", card.dataset.cafe === selectedCafe));
+  continueBtn.classList.toggle("enabled", !!selectedCafe);
+}
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    selectedCafe = card.dataset.cafe;
+    localStorage.setItem("selectedCafe", selectedCafe);
+    refresh();
+  });
+});
+continueBtn.addEventListener("click", () => {
+  if (!selectedCafe) return;
+  window.location.href = "details.html";
+});
+refresh();
+</script>
+</body>
+</html>
