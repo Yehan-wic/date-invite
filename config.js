@@ -11,4 +11,4 @@
 // const SITE_URL = "https://yourusername.github.io/date-invite";
 
 const FORM_EMAIL = "yehanwic@gmail.com";
-const SITE_URL = "https://Yehan-wic.github.io/date-invite";
+const SITE_URL = "https://yehan-wic.github.io/Something";;
